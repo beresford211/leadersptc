@@ -3,35 +3,15 @@
   color: #239F85;
 }
 
-
 h1.logo {
   font-size: 50px;
   font-family: Arial Black;  
 }
 
-@media (max-width: 767px){
-  h1.logo {
-      font-size: 50px;
-      font-family: Arial Black;  
-      letter-spacing: 0;
-  }
-}
-
-@media screen and (min-width: 1200px) {
-   h1.logo {
-    font-size: 120px;
-    font-family: Arial Black;
-    color: #FFF;
-    letter-spacing: 10px;
-  }
-};
-
-
 h2.tagline {
   font-size: 25px;
   font-family: Arial Black;  
 }
-
 
 .leadership-header {
   font-family: Arial Black;
@@ -592,22 +572,6 @@ h2.tagline {
 }
 */
 
-@media screen and (min-width: 720px) {
-  .expensetoggle {
-    width: 100%;
-    /*width: 50%;*/
-    float: left;
-    padding-right: 20px;
-    padding-left: 20px;
-    display: inline-flex;
-  }
-  .onoffswitch-switch {
-    background-color: yellow;
-    width: 22px;
-    margin: 6px 6px 8px 6px;
-    /*display: flex;*/
-  }
-}
 
 #event-application-footer, #event-application {
   text-decoration: none;
@@ -632,28 +596,11 @@ legend {
   margin-bottom: 15px;
 }
 
-@media screen and (min-width: 1200px) {
-  #company-expense-option {
-    margin-bottom: 15px;
-    display: inline
-  }
-}
-
-
 .onoffswitch {
   position: relative; width: 90px;
   margin: auto;
   -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
 }
-
-@media screen and (min-width: 720px) {
-  .onoffswitch {
-    margin: 0;
-    position: relative; width: 90px;
-    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
-  }
-}
-
 
 .onoffswitch-checkbox {
   display: none;
@@ -706,11 +653,52 @@ legend {
 }
 
 
+
+
 @media screen and (min-width: 720px) {
+  .onoffswitch {
+    margin: 0;
+    position: relative; width: 90px;
+    -webkit-user-select:none; -moz-user-select:none; -ms-user-select: none;
+  }
   .onoffswitch-switch {
     width: 22px;
     margin: 6px 6px 10px 6px;
   }
+  .expensetoggle {
+    width: 100%;
+    float: left;
+    padding-right: 20px;
+    padding-left: 20px;
+    display: inline-flex;
+  }
+  .onoffswitch-switch {
+    background-color: yellow;
+    width: 22px;
+    margin: 6px 6px 8px 6px;
+  }
+
 }
 
+@media (max-width: 767px){
+  h1.logo {
+      font-size: 50px;
+      font-family: Arial Black;  
+      letter-spacing: 0;
+  }
+}
 
+@media screen and (min-width: 1200px) {
+   h1.logo {
+    font-size: 120px;
+    font-family: Arial Black;
+    color: #FFF;
+    letter-spacing: 10px;
+  }
+
+  #company-expense-option {
+    margin-bottom: 15px;
+    display: inline
+  }
+
+}

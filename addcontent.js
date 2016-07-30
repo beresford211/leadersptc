@@ -95,7 +95,6 @@
 		speakerBioElement.innerHTML = speakerObj.speakerData.speakerBio;
 		speakerObj.speakerDiv.firstChild.appendChild(speakerBioElement);
 		// return speakerObj;
-		console.log("speakerObj",speakerObj);
 		speakerSection.appendChild(speakerObj.speakerDiv);
 	}
 
