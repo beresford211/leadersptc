@@ -264,8 +264,9 @@ h2.tagline {
   color: #4A4A4A;
   /*background-color: rgb(255, 255, 255);*/
   /*border: 1px solid rgb(0, 151, 127);*/
-  padding: 2em;
+  padding: 1em;
   margin: 4px;
+  font-size: 4rem;
   /*width: 210px;*/
   /*max-width: 223px;*/
   text-align: center;
@@ -285,8 +286,13 @@ h2.tagline {
   color: #239F85; 
 }
 
+.hideElement {
+  display: none;
+ } 
+
 .thanksforapplying {
   display: block;
+  font-family: Arial Black;
 }
 
 .leadership {
