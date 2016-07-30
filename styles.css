@@ -4,6 +4,7 @@
 }
 
 h1.logo , h2.tagline {
+  font-size: ;
   font-family: Arial Black;  
 }
 
@@ -260,6 +261,10 @@ h1.logo , h2.tagline {
   color: #239F85; 
 }
 
+.thanksforapplying {
+  display: block;
+}
+
 .leadership {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/ptc-event-background.jpg");
   background-size: 330px 375px;
@@ -444,7 +449,7 @@ h1.logo , h2.tagline {
   left: 3rem;
 }
 
-@media (min-device-width: 375px) {
+/*@media (min-device-width: 375px) {
   .venue-card-container {
     display: flex;
     justify-content: center;
@@ -553,7 +558,7 @@ h1.logo , h2.tagline {
     left: 42%;
   }
 }
-
+*/
 
 @media screen and (min-width: 720px) {
   .expensetoggle {

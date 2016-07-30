@@ -4,6 +4,7 @@
 	formElementsStored.formToggle = document.getElementById("event-application");
 	formElementsStored.footerFormToggle = document.getElementById("event-application-footer");
 	formElementsStored.submitApplication = document.getElementById("application-submitted");
+	formElementsStored.thanksforapplying = document.getElementById("thanksforapplying");
 
 	formElementsStored.submitApplication.addEventListener("click", submitApplicationData);
 	formElementsStored.footerFormToggle.addEventListener("click", toggleForm);
@@ -25,7 +26,8 @@
 		storage.userBenefitsFromEvent =	formData["user-benefits-from-event"].value;
 		storage.userContributesToEvent = formData["user-contributes-to-event"].value;
 		storage.myOnOffSwitch =	formData["myonoffswitch"].checked;
-		// formElementsStored.submitApplication.classList.add("")
+		formElementsStored.submitApplication.style.display = none;
+		formElementsStored.thanksforapplying.classList.add("thanksforapplying");
 		submitData(storage);
 	}
 
