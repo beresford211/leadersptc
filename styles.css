@@ -4,9 +4,16 @@
 }
 
 h1.logo , h2.tagline {
-  font-size: ;
+  font-size: 120px;
   font-family: Arial Black;  
 }
+
+@media screen and (min-width: 1200px) {
+   h1.logo , h2.tagline {
+    font-size: 120px;
+    font-family: Arial Black;  
+  }
+};
 
 .leadership-header {
   font-family: Arial Black;
@@ -227,24 +234,23 @@ h1.logo , h2.tagline {
   }
 }
 
-.venue-card-container {
+/*.venue-card-container {
   display: flex;
   justify-content: center;
   position: absolute;
   align-items: center;
 }
-
-.venue-location-card {
+*/
+.venue-location-title {
   font-family: Arial Black;
   color: #4A4A4A;
-  background-color: rgb(255, 255, 255);
+  /*background-color: rgb(255, 255, 255);*/
   border: 1px solid rgb(0, 151, 127);
   padding: 2em;
   margin: 4px;
   width: 210px;
   max-width: 223px;
   text-align: center;
-  z-index: 10;
 }
 
 @media (min-width: 1200px) {
