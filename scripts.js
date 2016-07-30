@@ -27,6 +27,7 @@
 		storage.userContributesToEvent = formData["user-contributes-to-event"].value;
 		storage.myOnOffSwitch =	formData["myonoffswitch"].checked;
 		formElementsStored.submitApplication.classList.add("hideElement");
+		formElementsStored.thanksforapplying.classList.remove("hideElement");
 		formElementsStored.thanksforapplying.classList.add("thanksforapplying");
 		submitData(storage);
 	}
