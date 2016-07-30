@@ -108,7 +108,7 @@ h2.tagline {
 }
 
 .signup-form textarea {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Arial Black;
   background: rgba(255,255,255,.1);
   border: none;
   border-radius: 4px;
@@ -179,7 +179,7 @@ h2.tagline {
 }
 
 .userinfo-input {
-  font-family: Georgia, "Times New Roman", Times, serif;
+  font-family: Arial Black;
   background: rgba(255,255,255,.1);
   border: none;
   border-radius: 4px;
