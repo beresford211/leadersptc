@@ -3,17 +3,35 @@
   color: #239F85;
 }
 
-h1.logo , h2.tagline {
-  font-size: 120px;
+
+h1.logo {
+  font-size: 90px;
   font-family: Arial Black;  
 }
 
+@media (max-width: 767px){
+  h1.logo {
+      font-size: 90px;
+      font-family: Arial Black;  
+      letter-spacing: 0;
+  }
+}
+
 @media screen and (min-width: 1200px) {
-   h1.logo , h2.tagline {
+   h1.logo {
     font-size: 120px;
-    font-family: Arial Black;  
+    font-family: Arial Black;
+    color: #FFF;
+    letter-spacing: 10px;
   }
 };
+
+
+h2.tagline {
+  font-size: 25px;
+  font-family: Arial Black;  
+}
+
 
 .leadership-header {
   font-family: Arial Black;
