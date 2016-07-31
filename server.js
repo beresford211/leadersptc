@@ -9,6 +9,6 @@ var routes = require('./routes.js');
 server.listen(port);
 
 app.use(bodyParser.json());
-app.use(express.static('leaders'));
+app.use(express.static(__dirname));
 routes(app);
 
