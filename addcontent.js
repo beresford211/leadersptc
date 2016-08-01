@@ -94,7 +94,6 @@
 		speakerBioElement.className = "speaker-bio";
 		speakerBioElement.innerHTML = speakerObj.speakerData.speakerBio;
 		speakerObj.speakerDiv.firstChild.appendChild(speakerBioElement);
-		// return speakerObj;
 		speakerSection.appendChild(speakerObj.speakerDiv);
 	}
 

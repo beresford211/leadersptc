@@ -6,6 +6,8 @@
 	formElementsStored.submitApplication = document.getElementById("application-submitted");
 	formElementsStored.thanksforapplying = document.getElementById("thanksforapplying");
 
+	formElementsStored.errormessage = document.getElementById("error-message");
+
 	formElementsStored.submitApplication.addEventListener("click", submitApplicationData);
 	formElementsStored.footerFormToggle.addEventListener("click", toggleForm);
 	formElementsStored.formToggle.addEventListener("click", toggleForm);
@@ -26,10 +28,12 @@
 		storage.userBenefitsFromEvent =	formData["user-benefits-from-event"].value;
 		storage.userContributesToEvent = formData["user-contributes-to-event"].value;
 		storage.myOnOffSwitch =	formData["myonoffswitch"].checked;
-		formElementsStored.submitApplication.classList.add("hideElement");
-		formElementsStored.thanksforapplying.classList.remove("hideElement");
-		formElementsStored.thanksforapplying.classList.add("thanksforapplying");
-		submitData(storage);
+		var storageLength = Object.keys(storage);
+		if(storageLength  >= 6){
+			submitData(storage);
+		} else {
+			formElementsStored.errormessage.classList.remove("hideElement");
+		}
 	}
 
 	function submitData(data){
@@ -40,7 +44,10 @@
 		contentType: 'application/json; charset=utf-8',
 		success: function(data){
 			if(data === "true"){
-				//add functionality to update UI with success message;
+				formElementsStored.errormessage.classList.add("hideElement");
+				formElementsStored.submitApplication.classList.add("hideElement");
+				formElementsStored.thanksforapplying.classList.remove("hideElement");
+				formElementsStored.thanksforapplying.classList.add("thanksforapplying");
 			}
 		},
 		error: function(err){
