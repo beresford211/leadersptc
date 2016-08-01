@@ -18,10 +18,8 @@
 	})();
 
 	function handleResultsSize(data){
-		console.log(data);
 		var cleanSets = (data.length) - (data.length % 3);
 		var leftOver = data.length % 3;
-		console.log(cleanSets)
 		for(let i = 0; i < cleanSets; i++){
 			var obj = {};
 			obj.speakerData = data[i];

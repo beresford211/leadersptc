@@ -10,7 +10,6 @@
 			success: function(data){
 				clearInnerContents(supporterWrapper);
 				addSupporter(data);
-				console.log("these are the supporters", data);
 			},
 			error: function(err){
 				//add functionality to update UI with error message;
