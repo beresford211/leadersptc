@@ -1,6 +1,9 @@
 (function(){
 	var supporterWrapper = document.getElementById("supporters-wrapper");
-	
+	var basicClass = "col-xs-12 col-sm-12 col-md-3 col-lg-3 supporter-wrap";
+	var isolatePhoto = "col-xs-12 col-sm-12 col-md-4 col-lg-4 supporter-wrap";
+	var twoPhotos = "col-xs-12 col-sm-12 col-md-6 col-lg-6 supporter-wrap";
+
 	//need to prevent further function calls if the list of functions is similar;
 	(function submitData(data){
 		$.ajax({
@@ -17,6 +20,7 @@
 	})();
 
 	function addSupporter(data){
+		console.log(data);
 		var cleanSets = (data.length) - (data.length % 3);
 		var leftOver = data.length % 3;
 
@@ -24,8 +28,28 @@
 			var obj = {};
 			obj.supportData = data[i];
 			obj.supportDiv = addElement("div");
-			addSupporterImg(addSupporterAtag(addSupporterCard(obj)));
+			addSupporterImg(addSupporterAtag(addSupporterCard(obj, basicClass)));
 		}
+
+		if(leftOver === 1){
+			var obj = {};
+			obj.supportData = data[data.length - 1];
+			obj.supportDiv = addElement("div");
+			addSupporterImg(addSupporterAtag(addSupporterCard(obj, isolatePhoto)));
+		} else if(leftOver === 2) {
+			var obj = {};
+			obj.supportData = data[data.length - 1];
+			obj.supportDiv = addElement("div");
+			console.log("OBJ", obj)
+			addSupporterImg(addSupporterAtag(addSupporterCard(obj, twoPhotos)));
+			var obj2 = {};
+			obj2.supportData = data[data.length - 2];
+			obj2.supportDiv = addElement("div");
+			console.log("OBJ2", obj2)
+			addSupporterImg(addSupporterAtag(addSupporterCard(obj2, twoPhotos)));
+		}
+
+
 	}
 
 	function clearInnerContents(el){
@@ -37,8 +61,8 @@
 		return document.createElement(newElement);
 	}
 
-	function addSupporterCard(supportObj){
-	  supportObj.supportDiv.className = "col-xs-12 col-sm-12 col-md-3 col-lg-3 supporter-wrap";
+	function addSupporterCard(supportObj, divClass){
+	  supportObj.supportDiv.className = divClass;
 	  return supportObj;
 	}
 

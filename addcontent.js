@@ -1,5 +1,7 @@
 (function(){
 	var speakerSection = document.getElementById("speakers-section");
+	var threeSpeakers = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 speaker-wrap";
+	var oneSpeakerRow = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0";
 	
 	//need to prevent further function calls if the list of functions is similar;
 	(function submitData(data){
@@ -24,17 +26,28 @@
 			var obj = {};
 			obj.speakerData = data[i];
 			obj.speakerDiv = addElement("div");
-			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj))))));
+			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, threeSpeakers))))));
 		}
 
-		// if(leftOver > 1){
-		// 	for(let j = 1; j < leftOver; j++){
-		// 	// data[i];
-		// 	}
-		// } else {
+		if(leftOver === 1){
+			var obj = {};
+			obj.speakerData = data[data.length - 1];
+			obj.speakerDiv = addElement("div");
+			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, oneSpeakerRow))))));
+		} else if(leftOver === 2) {	
+			var twoSpeaker1Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-2";
+			var twoSpeaker2Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0";
 
-		// }
+			var obj = {};
+			obj.speakerData = data[data.length - 1];
+			obj.speakerDiv = addElement("div");
+			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, twoSpeaker1Row))))));
 
+			var obj2 = {};
+			obj2.speakerData = data[data.length - 2];
+			obj2.speakerDiv = addElement("div");
+			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, twoSpeaker2Row))))));
+		}
 	}
 
 	function addElement(newElement){
@@ -46,8 +59,8 @@
 		return el;
 	}
 
-	function addSpeakerCard(speakerObj){
-		speakerObj.speakerDiv.className = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 speaker-wrap";
+	function addSpeakerCard(speakerObj, speakerClass){
+		speakerObj.speakerDiv.className = speakerClass;
 		return speakerObj;
 	}
 
@@ -57,7 +70,6 @@
 		speakerObj.speakerDiv.appendChild(speakerWrapper);
 		return speakerObj;
 	}
-
 
 	function addSpeakerImg(speakerObj){
 		var speakerImg = addElement("img");
