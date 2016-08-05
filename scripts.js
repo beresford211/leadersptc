@@ -29,7 +29,6 @@
 		storage.userContributesToEvent = formData["user-contributes-to-event"].value;
 		storage.myOnOffSwitch =	formData["myonoffswitch"].checked;
 		var storageLength = Object.keys(storage).length;
-		console.log(storageLength, storage, "this is it")
 		if(storageLength  >= 6){
 			submitData(storage);
 		} else {
@@ -44,7 +43,6 @@
 		data: JSON.stringify({ "data": data }),
 		contentType: 'application/json; charset=utf-8',
 		success: function(data){
-			console.log("data", data);
 			if(data === "true"){
 				formElementsStored.errormessage.classList.add("hideElement");
 				formElementsStored.submitApplication.classList.add("hideElement");
