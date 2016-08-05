@@ -1,5 +1,5 @@
 var Airtable = require('airtable');
-var base = new Airtable({ apiKey: PROCESS.ENV.ATKEY }).base('app6wA7UTiPFvDybn');
+var base = new Airtable({ apiKey: process.env.ATKEY }).base('app6wA7UTiPFvDybn');
 var speakersList = [];
 var supportersList = [];
 var aboutParagraphs = [];
