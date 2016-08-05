@@ -11,7 +11,7 @@
 	formElementsStored.submitApplication.addEventListener("click", submitApplicationData);
 	formElementsStored.footerFormToggle.addEventListener("click", toggleForm);
 	formElementsStored.formToggle.addEventListener("click", toggleForm);
-	
+
 	function toggleForm(e){
 	  application.classList.toggle("active");
 	}
@@ -29,6 +29,7 @@
 		storage.userContributesToEvent = formData["user-contributes-to-event"].value;
 		storage.myOnOffSwitch =	formData["myonoffswitch"].checked;
 		var storageLength = Object.keys(storage);
+		console.log(storageLength, storage, "this is it")
 		if(storageLength  >= 6){
 			submitData(storage);
 		} else {
@@ -43,6 +44,7 @@
 		data: JSON.stringify({ "data": data }),
 		contentType: 'application/json; charset=utf-8',
 		success: function(data){
+			console.log("data", data);
 			if(data === "true"){
 				formElementsStored.errormessage.classList.add("hideElement");
 				formElementsStored.submitApplication.classList.add("hideElement");
@@ -54,5 +56,5 @@
 				//add functionality to update UI with error message;
 		} });
 	}
-	
+
 })();
