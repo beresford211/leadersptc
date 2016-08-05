@@ -28,7 +28,7 @@
 		storage.userBenefitsFromEvent =	formData["user-benefits-from-event"].value;
 		storage.userContributesToEvent = formData["user-contributes-to-event"].value;
 		storage.myOnOffSwitch =	formData["myonoffswitch"].checked;
-		var storageLength = Object.keys(storage);
+		var storageLength = Object.keys(storage).length;
 		console.log(storageLength, storage, "this is it")
 		if(storageLength  >= 6){
 			submitData(storage);
