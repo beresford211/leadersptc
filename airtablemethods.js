@@ -76,6 +76,3 @@ module.exports = {
 	retrieveListofAboutParagraphs :retrieveListofAboutParagraphs,
 	retrieveListofSpeakers: retrieveListofSpeakers
 };
-
-
-
