@@ -20,7 +20,6 @@
 	})();
 
 	function addSupporter(data){
-		console.log(data);
 		var cleanSets = (data.length) - (data.length % 3);
 		var leftOver = data.length % 3;
 
@@ -48,8 +47,6 @@
 			console.log("OBJ2", obj2)
 			addSupporterImg(addSupporterAtag(addSupporterCard(obj2, twoPhotos)));
 		}
-
-
 	}
 
 	function clearInnerContents(el){

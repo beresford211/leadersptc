@@ -2,7 +2,7 @@
 	var speakerSection = document.getElementById("speakers-section");
 	var threeSpeakers = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 speaker-wrap";
 	var oneSpeakerRow = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0";
-	
+
 	//need to prevent further function calls if the list of functions is similar;
 	(function submitData(data){
 		$.ajax({
@@ -15,7 +15,7 @@
 			},
 			error: function(err){
 			  console.log("This is your err ", err);
-			} 
+			}
 		});
 	})();
 
@@ -29,12 +29,12 @@
 			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, threeSpeakers))))));
 		}
 
-		if(leftOver === 1){
+		if(leftOver === 1) {
 			var obj = {};
 			obj.speakerData = data[data.length - 1];
 			obj.speakerDiv = addElement("div");
 			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, oneSpeakerRow))))));
-		} else if(leftOver === 2) {	
+		} else if (leftOver === 2) {
 			var twoSpeaker1Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-2";
 			var twoSpeaker2Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0";
 
