@@ -832,6 +832,10 @@ h2.tagline {
   padding-right: 2rem;
 }
 
+.venue > h3 {
+  text-align: center;
+}
+
 @media (min-width: 720px) {
   .venue {
     width: 100%;
@@ -839,9 +843,7 @@ h2.tagline {
   }
 }
 
-.venue > h3 {
-  text-align: center;
-}
+
 
 @media screen and (min-width: 1200px){
   .venue-block {
@@ -1320,7 +1322,7 @@ legend {
 
   #company-expense-option {
     margin-bottom: 15px;
-    display: inline
+    display: inline;
   }
 
 }
