@@ -4,20 +4,20 @@
 	var oneSpeakerRow = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0";
 
 	//need to prevent further function calls if the list of functions is similar;
-	(function submitData(data){
-		$.ajax({
-			method: "GET",
-			url: "/speakers",
-			contentType: 'application/json; charset=utf-8',
-			success: function(data){
-				clearInnerContents(speakerSection);
-				handleResultsSize(data);
-			},
-			error: function(err){
-			  console.log("This is your err ", err);
-			}
-		});
-	})();
+	// (function submitData(data){
+	// 	$.ajax({
+	// 		method: "GET",
+	// 		url: "/speakers",
+	// 		contentType: 'application/json; charset=utf-8',
+	// 		success: function(data){
+	// 			clearInnerContents(speakerSection);
+	// 			handleResultsSize(data);
+	// 		},
+	// 		error: function(err){
+	// 		  console.log("This is your err ", err);
+	// 		}
+	// 	});
+	// })();
 
 	function handleResultsSize(data){
 		var cleanSets = (data.length) - (data.length % 3);
