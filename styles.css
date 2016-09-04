@@ -5,12 +5,12 @@
 
 h1.logo {
   font-size: 50px;
-  font-family: Arial Black;  
+  font-family: Arial Black;
 }
 
 h2.tagline {
   font-size: 25px;
-  font-family: Arial Black;  
+  font-family: Arial Black;
 }
 
 .leadership-header {
@@ -42,7 +42,7 @@ h2.tagline {
 .userbackground {
   width: 100%;
   float: none;
-} 
+}
 
 .form-wrapper {
   width: 100%;
@@ -80,7 +80,7 @@ h2.tagline {
 .signup-form {
   height: 0;
   opacity: 0;
-  overflow: hidden; 
+  overflow: hidden;
   padding: 1.5rem 1.5rem 0 1.5rem;
   transition: opacity 1s ease-out;
 }
@@ -103,9 +103,9 @@ h2.tagline {
   outline: 0;
   padding: 7px;
   width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
   background-color: #e8eeef;
   color:#8a97a0;
   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -125,7 +125,7 @@ h2.tagline {
   .signup-form{
     height: 0;
     opacity: 0;
-    overflow: hidden; 
+    overflow: hidden;
     padding: 1rem 1.5rem 0 1rem;
     transition: opacity 1s ease-out;
   }
@@ -157,7 +157,7 @@ h2.tagline {
   .contactinfo label{
     width: 50%;
     display: inline;
-  } 
+  }
 }
 
 .contactinfo label {
@@ -175,9 +175,9 @@ h2.tagline {
   outline: 0;
   padding: 7px;
   width: 100%;
-  box-sizing: border-box; 
+  box-sizing: border-box;
   -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box; 
+  -moz-box-sizing: border-box;
   background-color: #e8eeef;
   color:#8a97a0;
   -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -195,9 +195,9 @@ h2.tagline {
     margin: 0;
     outline: 0;
     padding: 7px;
-    box-sizing: border-box; 
+    box-sizing: border-box;
     -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box; 
+    -moz-box-sizing: border-box;
     background-color: #e8eeef;
     color:#8a97a0;
     -webkit-box-shadow: 0 1px 0 rgba(0,0,0,0.03) inset;
@@ -208,7 +208,7 @@ h2.tagline {
 
 .active {
   opacity: 1;
-  height: auto;    
+  height: auto;
 }
 
 .venue {
@@ -270,12 +270,12 @@ h2.tagline {
 }
 
 .speaker-company > a {
-  color: #239F85; 
+  color: #239F85;
 }
 
 .hideElement {
   display: none;
- } 
+ }
 
 .thanksforapplying {
   margin: 1.5rem;
@@ -323,8 +323,8 @@ h2.tagline {
   position: absolute;
   clip: rect(0,0,0,0);
   pointer-events: none;
-} 
-  
+}
+
 @media (min-width: 1200px) {
   .expense-option {
     color: #fff;
@@ -349,7 +349,7 @@ h2.tagline {
     border: 1px solid transparent;
     width: 50%;
   }
-} 
+}
 
 .form-submission {
   margin: 1.5rem;
@@ -373,7 +373,7 @@ h2.tagline {
   cursor: pointer;
   transition: all 0.25s ease;
 }
- 
+
 .form-submission-button:hover {
   color:white;
   background: #1ECD97;
@@ -591,7 +591,7 @@ textarea {
 
 form {
   width: 100%;
-}  
+}
 
 legend {
   font-weight: bold;
@@ -615,7 +615,7 @@ legend {
 
 .onoffswitch-label {
   display: block;
-  overflow: hidden; 
+  overflow: hidden;
   cursor: pointer;
   border: 2px solid #575757; border-radius: 20px;
 }
@@ -650,13 +650,13 @@ legend {
   position: absolute; top: 0; bottom: 0;
   right: 56px;
   border: 2px solid #575757; border-radius: 20px;
-  transition: all 0.3s ease-in 0s; 
+  transition: all 0.3s ease-in 0s;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-inner {
   margin-left: 0;
 }
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
-  right: 0px; 
+  right: 0px;
 }
 
 
@@ -689,7 +689,7 @@ legend {
 @media (max-width: 767px){
   h1.logo {
       font-size: 50px;
-      font-family: Arial Black;  
+      font-family: Arial Black;
       letter-spacing: 0;
   }
 }
