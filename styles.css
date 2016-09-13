@@ -1002,9 +1002,9 @@ h2.tagline {
   font-weight: 300;
 }
 
-.schedule-container {
+/*.schedule-container {
   padding-left: 8rem;
-}
+}*/
 
 @media screen and (max-width: 720px) {
   .schedule-container {
