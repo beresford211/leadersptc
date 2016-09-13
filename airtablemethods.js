@@ -1,10 +1,11 @@
 var Airtable = require('airtable');
-var base = new Airtable({ apiKey: process.env.ATKEY }).base('app6wA7UTiPFvDybn');
+var base = new Airtable({ apiKey:	process.env.ATKEY }).base('app6wA7UTiPFvDybn');
 var speakersList = [];
+var sessionSchedule = [];
 var supportersList = [];
 var aboutParagraphs = [];
 
-base('speakers').select({ maxRecords: 10, view: "Main View" }).eachPage(function page(records) {
+base('speakers').select({ maxRecords: 20, view: "Main View" }).eachPage(function page(records) {
 // This function (`page`) will get called for each page of records.
 	records.forEach(function(record) {
 	  var userObj = {};
@@ -17,7 +18,7 @@ base('speakers').select({ maxRecords: 10, view: "Main View" }).eachPage(function
 	});
 });
 
-base('supporters').select({ maxRecords: 10, view: "Main View" }).eachPage(function page(records) {
+base('supporters').select({ maxRecords: 9, view: "Main View" }).eachPage(function page(records) {
 // This function (`page`) will get called for each page of records.
 	records.forEach(function(record) {
 		var supporterObj = {};
@@ -34,6 +35,19 @@ base('about-section').select({ maxRecords: 3, view: "Main View" }).eachPage(func
 		var aboutObj = {};
 		aboutObj.aboutParagraph = record.get('paragraphContent');
 		aboutParagraphs.push(aboutObj);
+	});
+});
+
+base('schedule').select({ maxRecords: 20, view: "Main View" }).eachPage(function page(records) {
+// This function (`page`) will get called for each page of records.
+	records.forEach(function(record) {
+	  var sessionObj = {};
+	  sessionObj.sessionTitle = record.get('session-title');
+	  sessionObj.startTime = record.get('start-time');
+	  sessionObj.endTime = record.get('end-time');
+	  sessionObj.speakerName = record.get('speaker-name');
+	  sessionObj.sessionDescription = record.get('session-description');
+	  sessionSchedule.push(sessionObj);
 	});
 });
 
@@ -70,9 +84,15 @@ var retrieveListofAboutParagraphs = function(){
 	return aboutParagraphs;
 };
 
+var retrieveSessionSchedule = function(){
+	return sessionSchedule;
+};
+
+
 module.exports = {
 	createNewApplicant: createNewApplicant,
 	retrieveListofSupporters : retrieveListofSupporters,
 	retrieveListofAboutParagraphs :retrieveListofAboutParagraphs,
-	retrieveListofSpeakers: retrieveListofSpeakers
+	retrieveListofSpeakers: retrieveListofSpeakers,
+	retrieveSessionSchedule: retrieveSessionSchedule
 };

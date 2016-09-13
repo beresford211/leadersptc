@@ -780,6 +780,21 @@ h2.tagline {
   display: block;
   width: 100%;
 }
+.speaker-session-title {
+  font-family: Arial;
+  color: #4A4A4A;
+  /*background-color: rgb(255, 255, 255);*/
+  /*border: 1px solid rgb(0, 151, 127);*/
+  padding: 1em;
+  margin: 4px;
+  margin-bottom: 0;
+  padding-bottom: 0;
+  font-size: 2rem;
+  /*width: 210px;*/
+  /*max-width: 223px;*/
+  text-align: center;
+}
+
 
 .userinfo-input {
   font-family: Arial;
@@ -969,74 +984,6 @@ h2.tagline {
   }
 }
 
-
-.schedule-wrapper {
-  padding: 30px 0;
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-}
-
-.schedule-speaker-card {
-  padding: 1rem 0;
-}
-
-.schedule-speakersession-duration {
- color: #239F85;
- font-weight: 600;
- display: inline-block;
-}
-
-.schedule-speaker-text {
-  font-weight: 400;
-  font-style: italic;
-}
-
-.schedule-speaker-title {
-  font-size: 20px;
-  font-weight: 600;
-}
-
-.schedule-speaker-title > span {
-  font-size: 20px;
-  font-weight: 300;
-}
-
-.schedule-container {
-  padding-left: 8rem;
-}
-
-@media screen and (max-width: 720px) {
-  .schedule-container {
-    padding-left: 2rem;
-  }
-
-  .schedule-wrapper {
-    display: flex;
-    text-align: unset;
-    flex-direction: column;
-    padding: 0 5% 5% 5%;
-  }
-
-  .schedule-speaker-title {
-    font-size: 20px;
-    font-weight: 600;
-  }
-
-  .schedule-speaker-time {
-   color: #239F85;
-   font-weight: 600;
-  }
-
-  .divider {
-    display: none;
-  }
-
-  .schedule-speakersession-duration {
-    display: block;
-  }
-}
-
 .form-submission {
   margin: 1.5rem;
   text-align: center;
@@ -1072,6 +1019,62 @@ h2.tagline {
 .form-submission-button:after {
   content:"SUBMIT";
 }
+
+
+.schedule-wrapper {
+  padding-top: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.schedule-speaker-card {
+  padding: 1rem 0;
+}
+
+.schedule-speakersession-duration {
+ color: #239F85;
+ font-weight: 600;
+ display: inline-block;
+}
+
+.schedule-speaker-text {
+  font-weight: 400;
+  font-style: italic;
+}
+
+.schedule-speaker-title {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.schedule-speaker-title > span {
+  font-size: 20px;
+  font-weight: 300;
+}
+
+@media screen and (min-width: 720px) {
+  .schedule-wrapper {
+    display: flex;
+    /*text-align: center;*/
+    flex-direction: column;
+    padding: 0 5% 5% 5%;
+  }
+
+  .schedule-speaker-title {
+    font-size: 20px;
+    font-weight: 600;
+  }
+
+  .schedule-speaker-time {
+   color: #239F85;
+   font-weight: 600;
+  }
+
+}
+
+
+
+
 
 .venue-block-left {
   padding: 0% 0% 35% 0%;
@@ -1344,9 +1347,6 @@ legend {
 .onoffswitch-checkbox:checked + .onoffswitch-label .onoffswitch-switch {
   right: 0px;
 }
-
-
-
 
 @media screen and (min-width: 720px) {
   .onoffswitch {

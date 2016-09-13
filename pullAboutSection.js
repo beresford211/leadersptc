@@ -1,4 +1,3 @@
-
 (function(){
 	var aboutSection = document.getElementById("about-paragraphs");
 

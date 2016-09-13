@@ -5,7 +5,7 @@
 	var twoPhotos = "col-xs-12 col-sm-12 col-md-6 col-lg-6 supporter-wrap";
 
 	//need to prevent further function calls if the list of functions is similar;
-	(function submitData(data){
+	(function(data){
 		$.ajax({
 			method: "GET",
 			url: "/supporters",
@@ -23,28 +23,26 @@
 		var cleanSets = (data.length) - (data.length % 3);
 		var leftOver = data.length % 3;
 
-		for(let i = 0; i < cleanSets; i++){
+		for(let i = 0; i < cleanSets; i++) {
 			var obj = {};
 			obj.supportData = data[i];
 			obj.supportDiv = addElement("div");
 			addSupporterImg(addSupporterAtag(addSupporterCard(obj, basicClass)));
 		}
 
-		if(leftOver === 1){
+		if (leftOver === 1) {
 			var obj = {};
 			obj.supportData = data[data.length - 1];
 			obj.supportDiv = addElement("div");
 			addSupporterImg(addSupporterAtag(addSupporterCard(obj, isolatePhoto)));
-		} else if(leftOver === 2) {
+		} else if (leftOver === 2) {
 			var obj = {};
 			obj.supportData = data[data.length - 1];
 			obj.supportDiv = addElement("div");
-			console.log("OBJ", obj)
 			addSupporterImg(addSupporterAtag(addSupporterCard(obj, twoPhotos)));
 			var obj2 = {};
 			obj2.supportData = data[data.length - 2];
 			obj2.supportDiv = addElement("div");
-			console.log("OBJ2", obj2)
 			addSupporterImg(addSupporterAtag(addSupporterCard(obj2, twoPhotos)));
 		}
 	}

@@ -3,7 +3,7 @@
 	var threeSpeakers = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 speaker-wrap";
 	var oneSpeakerRow = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0";
 
-	//need to prevent further function calls if the list of functions is similar;
+	// get data via server call which calls airtabeAPI
 	// (function submitData(data){
 	// 	$.ajax({
 	// 		method: "GET",
@@ -18,6 +18,16 @@
 	// 		}
 	// 	});
 	// })();
+
+	//    results returned in an array with object formated like so
+
+	// var sampleSpeakerObj = {
+	// 	speakerBio:	"Entrepreneur | Investor",
+	// 	speakerCompany:	"Floodgate",
+	// 	speakerCompanyUrl: "http://floodgate.com/",
+	// 	speakerHeadshot: "http://i.imgur.com/SoQWRJl.jpg",
+	// 	speakerName: "Mike Maples"
+	// }
 
 	function handleResultsSize(data){
 		var cleanSets = (data.length) - (data.length % 3);
