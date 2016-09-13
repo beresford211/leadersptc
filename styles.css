@@ -321,7 +321,9 @@ img.eb-logo {
     margin-top: 50px
 }
 .footer-background {
-    background-color: #283740
+  padding-left: -2rem;
+  padding-right: -2rem;
+  background-color: #283740;
 }
 .footer {
     margin-top: 20px;
