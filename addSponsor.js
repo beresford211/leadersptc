@@ -5,19 +5,19 @@
 	var twoPhotos = "col-xs-12 col-sm-12 col-md-6 col-lg-6 supporter-wrap";
 
 	//need to prevent further function calls if the list of functions is similar;
-	(function(data){
-		$.ajax({
-			method: "GET",
-			url: "/supporters",
-			contentType: 'application/json; charset=utf-8',
-			success: function(data){
-				clearInnerContents(supporterWrapper);
-				addSupporter(data);
-			},
-			error: function(err){
-				//add functionality to update UI with error message;
-			} });
-	})();
+	// (function(data){
+	// 	$.ajax({
+	// 		method: "GET",
+	// 		url: "/supporters",
+	// 		contentType: 'application/json; charset=utf-8',
+	// 		success: function(data){
+	// 			clearInnerContents(supporterWrapper);
+	// 			addSupporter(data);
+	// 		},
+	// 		error: function(err){
+	// 			//add functionality to update UI with error message;
+	// 		} });
+	// })();
 
 	function addSupporter(data){
 		var cleanSets = (data.length) - (data.length % 3);

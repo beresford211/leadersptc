@@ -38,7 +38,7 @@ base('about-section').select({ maxRecords: 3, view: "Main View" }).eachPage(func
 	});
 });
 
-base('schedule').select({ maxRecords: 20, view: "Main View" }).eachPage(function page(records) {
+base('schedule').select({ maxRecords: 40, view: "Main View" }).eachPage(function page(records) {
 // This function (`page`) will get called for each page of records.
 	records.forEach(function(record) {
 	  var sessionObj = {};

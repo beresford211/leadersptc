@@ -4,23 +4,21 @@
 	var oneSpeakerRow = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0";
 
 	// get data via server call which calls airtabeAPI
-	// (function submitData(data){
-	// 	$.ajax({
-	// 		method: "GET",
-	// 		url: "/speakers",
-	// 		contentType: 'application/json; charset=utf-8',
-	// 		success: function(data){
-	// 			clearInnerContents(speakerSection);
-	// 			handleResultsSize(data);
-	// 		},
-	// 		error: function(err){
-	// 		  console.log("This is your err ", err);
-	// 		}
-	// 	});
-	// })();
-
-	//    results returned in an array with object formated like so
-
+	(function submitData(data){
+		$.ajax({
+			method: "GET",
+			url: "/speakers",
+			contentType: 'application/json; charset=utf-8',
+			success: function(data){
+				clearInnerContents(speakerSection);
+				handleResultsSize(data);
+			},
+			error: function(err){
+			  console.log("This is your err ", err);
+			}
+		});
+	})();
+	//
 	// var sampleSpeakerObj = {
 	// 	speakerBio:	"Entrepreneur | Investor",
 	// 	speakerCompany:	"Floodgate",
