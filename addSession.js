@@ -1,21 +1,21 @@
 (function() {
 	var sessionsSection = document.getElementById("schedule-wrapper");
 
-	// need to prevent further function calls if the list of functions is similar;
-	(function() {
-		$.ajax({
-			method: "GET",
-			url: "/schedule",
-			contentType: 'application/json; charset=utf-8',
-			success: function(data) {
-				clearInnerContents(sessionsSection);
-				handleResultsSize(data);
-			},
-			error: function(err) {
-			  console.log("This is your err ", err);
-			}
-		});
-	})();
+	// // need to prevent further function calls if the list of functions is similar;
+	// (function() {
+	// 	$.ajax({
+	// 		method: "GET",
+	// 		url: "/schedule",
+	// 		contentType: 'application/json; charset=utf-8',
+	// 		success: function(data) {
+	// 			clearInnerContents(sessionsSection);
+	// 			handleResultsSize(data);
+	// 		},
+	// 		error: function(err) {
+	// 		  console.log("This is your err ", err);
+	// 		}
+	// 	});
+	// })();
 
 	function handleResultsSize(data) {
 	 for(let i = 0; i < data.length; i++) {
