@@ -88,7 +88,6 @@ var retrieveSessionSchedule = function(){
 	return sessionSchedule;
 };
 
-
 module.exports = {
 	createNewApplicant: createNewApplicant,
 	retrieveListofSupporters : retrieveListofSupporters,
