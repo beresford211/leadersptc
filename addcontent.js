@@ -18,14 +18,6 @@
 			}
 		});
 	})();
-	//
-	// var sampleSpeakerObj = {
-	// 	speakerBio:	"Entrepreneur | Investor",
-	// 	speakerCompany:	"Floodgate",
-	// 	speakerCompanyUrl: "http://floodgate.com/",
-	// 	speakerHeadshot: "http://i.imgur.com/SoQWRJl.jpg",
-	// 	speakerName: "Mike Maples"
-	// }
 
 	function handleResultsSize(data){
 		var cleanSets = (data.length) - (data.length % 3);
