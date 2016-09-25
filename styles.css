@@ -999,7 +999,9 @@ h2.tagline {
   font-weight: 600;
 }
 
-.schedule-speaker-title > span {
+/*.schedule-speaker-title > span */
+
+.divider{
   font-size: 20px;
   font-weight: 300;
 }
@@ -1143,6 +1145,60 @@ h2.tagline {
    }
 }
 
+
+.event-day-container {
+  padding-top: 1rem;
+  font-family: Arial Black, sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.event-day-title {
+  padding: 1rem 0;
+  margin: 0 10px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.event-day-container-day-1 {
+  margin-bottom: 3rem;
+}
+
+.event-day-container-day-2 {
+  margin-bottom: 1rem;
+}
+
+.event-day-container-day-3 {
+  margin-top: 3rem;
+}
+
+.day-1 {
+  padding-right: 20rem;
+  padding-left: 20rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+@media (max-device-width: 720px) {
+  .event-day-container {
+    padding-top: 1rem;
+    font-size: 20px;
+  }
+
+  .day-1 {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+
+.schedule-bar {
+  height: 1px;
+  background-color: #239F85
+}
+
 .venue-image-container {
   position: relative;
 }
@@ -1232,6 +1288,8 @@ h2.tagline {
     left: 17.5rem;
   }
 }
+
+
 
 @media (min-device-width: 720px) {
   .venue-card-container {
