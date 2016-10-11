@@ -10,7 +10,6 @@
 	// 		url: "/speakers",
 	// 		contentType: 'application/json; charset=utf-8',
 	// 		success: function(data){
-	// 			console.log("works", data);
 	// 			clearInnerContents(speakerSection);
 	// 			handleResultsSize(data);
 	// 		},
