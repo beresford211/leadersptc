@@ -3,7 +3,6 @@
 	var threeSpeakers = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 speaker-wrap";
 	var oneSpeakerRow = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0";
 
-	// get data via server call which calls airtabeAPI
 	// (function submitData(data){
 	// 	$.ajax({
 	// 		method: "GET",
@@ -59,15 +58,15 @@
 		return el;
 	}
 
-	function addSpeakerCard(speakerObj, speakerClass){
-		speakerObj.speakerDiv.className = speakerClass;
-		return speakerObj;
+	function createSpeakerCard(classes){
+		var speakerDiv = addElement("div");
+		speakerDiv.className = classes;
+		return speakerDiv;
 	}
 
-	function addSpeakerDiv(speakerObj){
+	function createSpeakerWrapper(){
 		var speakerWrapper = addElement("div");
 		speakerWrapper.className = "speaker";
-		speakerObj.speakerDiv.appendChild(speakerWrapper);
 		return speakerObj;
 	}
 
@@ -105,6 +104,28 @@
 		speakerBioElement.innerHTML = speakerObj.speakerData.speakerBio;
 		speakerObj.speakerDiv.firstChild.appendChild(speakerBioElement);
 		speakerSection.appendChild(speakerObj.speakerDiv);
+	}
+
+	function add1SpeakerRow(speakerObj) {
+		var oneSpeakerRow = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-12 col-md-offset-0 col-lg-12 col-lg-offset-0";
+		addSpeakerToRow(speakerObj, oneSpeakerRow);
+	}
+
+	function add2SpeakerRow(speakers) {
+		var speakerA = speakers[0];
+		var twoSpeaker1Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-2";
+		addSpeakerToRow(speakerA, twoSpeaker1Row);
+
+		var speakerB = speakers[1];
+		var twoSpeaker2Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0";
+		addSpeakerToRow(speakerB, twoSpeaker2Row);
+	}
+
+	function add3SpeakerRow(speakers){
+		var threeSpeakers = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0 speaker-wrap"
+		speakers.forEach(function addTo3SpeakerRow(speakerObj){
+			addSpeakerToRow(speakerObj, threeSpeakers);
+		});
 	}
 
 })();
