@@ -3,7 +3,8 @@ var app = express();
 var http = require('http');
 var server = http.createServer(app);
 var bodyParser = require('body-parser');
-var port = 8888; //process.env.PORT ||
+var port = process.env.PORT || 8888;
+
 var routes = require('./routes.js');
 
 server.listen(port);
