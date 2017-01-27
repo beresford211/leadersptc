@@ -18,36 +18,53 @@
 	// 	});
 	// })();
 
-	function handleResultsSize(data){
-		var cleanSets = (data.length) - (data.length % 3);
-		var leftOver = data.length % 3;
-		for(let i = 0; i < cleanSets; i++){
-			var obj = {};
-			obj.speakerData = data[i];
-			obj.speakerDiv = addElement("div");
-			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, threeSpeakers))))));
+
+
+
+	function addSpeakerRow(data){
+		var perRow = 3;
+		var cleanSets = data.length - data.length % perRow;
+
+		for(var i = 0; i <= cleanSets; i += perRow){
+			var remains = length - i;
+			if (remains >= perRow) {
+				add3SpeakerRow(
+					[{speakerData: data[i],
+						speakerData: data[i + 1],
+						speakerData: data[i + 2]
+					}]
+				);
+			} else if (remaining == 1) {
+				add1SpeakerRow({speakerData: data[data.length - 1]});
+			} else if (remaining == 2) {
+			  add2SpeakerRow([
+					{speakerData: data[data.length - 2]},
+					{speakerData: data[data.length - 1]}
+				])
+			}
 		}
-
-		if(leftOver === 1) {
-			var obj = {};
-			obj.speakerData = data[data.length - 1];
-			obj.speakerDiv = addElement("div");
-			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, oneSpeakerRow))))));
-		} else if (leftOver === 2) {
-			var twoSpeaker1Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-2";
-			var twoSpeaker2Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0";
-
-			var obj = {};
-			obj.speakerData = data[data.length - 1];
-			obj.speakerDiv = addElement("div");
-			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, twoSpeaker1Row))))));
-
-			var obj2 = {};
-			obj2.speakerData = data[data.length - 2];
-			obj2.speakerDiv = addElement("div");
-			addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj2, twoSpeaker2Row))))));
-		}
-	}
+	//
+	//
+	// 	if(leftOver === 1) {
+	// 		var obj = {};
+	// 		obj.speakerData = data[data.length - 1];
+	// 		obj.speakerDiv = addElement("div");
+	// 		addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, oneSpeakerRow))))));
+	// 	} else if (leftOver === 2) {
+	// 		var twoSpeaker1Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-2";
+	// 		var twoSpeaker2Row = "col-xs-12 col-sm-6 col-sm-offset-0 col-md-4 col-md-offset-0 col-lg-4 col-lg-offset-0";
+	//
+	// 		var obj = {};
+	// 		obj.speakerData = data[data.length - 1];
+	// 		obj.speakerDiv = addElement("div");
+	// 		addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj, twoSpeaker1Row))))));
+	//
+	// 		var obj2 = {};
+	// 		obj2.speakerData = data[data.length - 2];
+	// 		obj2.speakerDiv = addElement("div");
+	// 		addSpeakerBio(addSpeakerCompany(addSpeakerName(addSpeakerImg(addSpeakerDiv(addSpeakerCard(obj2, twoSpeaker2Row))))));
+	// 	}
+	// }
 
 	function addElement(newElement){
 		return document.createElement(newElement);
@@ -70,12 +87,11 @@
 		return speakerObj;
 	}
 
-	function addSpeakerImg(speakerObj){
+	function createSpeakerImg(speakerObj){
 		var speakerImg = addElement("img");
 		speakerImg.src = speakerObj.speakerData.speakerHeadshot;
 		speakerImg.alt = speakerObj.speakerData.speakerName;
 		speakerImg.className = "speaker-pic img-circle img-responsive";
-		speakerObj.speakerDiv.firstChild.appendChild(speakerImg);
 		return speakerObj;
 	}
 
